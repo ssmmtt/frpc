@@ -16,6 +16,13 @@ sleep 10 && wget -P /tmp https://raw.githubusercontent.com/pqguanyinli/frpc/mast
 
 /tmp/frpc -c /etc/storage/frpc.ini >/dev/null 2>&1 &
 ```
+##
+高恪固件方法：
+将frpc.ini放到/etc目录下，在 /etc/rc.local 文件中添加以下代码
+```
+sleep 10 && curl -k https://raw.githubusercontent.com/ssmmtt/frpc/master/frpc -o /tmp/frpc && chmod 777 /tmp/frpc && /tmp/frpc -c /etc/frpc.ini > /dev/null 2>&1 &
+```
+
 ### 3、重启路由
 
 ## FRP内网穿透不到两分钟就学会及扩展运用,轻松实现外网访问esxi后台管理界面、lede软路由后台、群晖NAS及ds photo登录
